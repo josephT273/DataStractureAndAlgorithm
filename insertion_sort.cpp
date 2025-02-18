@@ -29,20 +29,7 @@ int main(){
     int numbers[5] = {1, 5, 2, 4, 3};
     int j, key;
 
-
-    for (size_t i = 1; i < 5; i++)
-    {
-        key = numbers[i];
-        j = i - 1;
-        while (j >= 0 && key > numbers[j])
-        {
-            numbers[j + 1] = numbers[j];
-            j = j - 1;
-        }
-        numbers[j + 1] = key;
-    }
-
-    // insertionSort(numbers, 5);
+    insertionSort(numbers, 5);
     
 
     cout << "Sorted values\n";
