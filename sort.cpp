@@ -40,15 +40,21 @@ void insertionSort(int numbers[], int n){
 }
 
 void bubbleSort(int numbers[], int n){
-    for(size_t i = 0; i < n; i++){
-        for (size_t j = 0; j < n - i - 1; j++)
+    bool swaped = false;
+    for(size_t i = 0; i < n - 1; i++){
+        for (size_t j = 0; j < n - 1; j++)
         {
             if (numbers[j] > numbers[j + 1])
             {
                 swap(numbers[j], numbers[j + 1]);
+                swaped = true;
             }
         }
-        
+
+        if (!swaped)
+        {
+            break;
+        }
     }
     cout << endl << "Bubble sort\n";
     for(size_t i = 0; i < n; i++){
