@@ -11,7 +11,7 @@ class Stack{
         Stack(int);
         void push(int);
         void pop();
-        int pic();
+        int peek();
         void display();
         bool isFull();
         bool isEmpty();
@@ -40,7 +40,7 @@ void Stack::pop(){
     top--;
 }
 
-int Stack::pic(){
+int Stack::peek(){
     return arr[top];
 }
 
@@ -67,7 +67,7 @@ int main(){
     cout << "Stack push operation" << endl;
     stack->display();
 
-    cout << "Top element: " << stack->pic() << endl;
+    cout << "Top element: " << stack->peek() << endl;
     
     stack->pop();
     stack->pop();
